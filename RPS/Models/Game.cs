@@ -1,3 +1,5 @@
+using System;
+
 namespace RPS.Models
 {
   public class Game
@@ -51,17 +53,18 @@ namespace RPS.Models
       }
       else
       {
-        return "error";
+        return "Please enter rock, paper, or scissors";
       }
     }
 
     public string PlayerOneWins()
     {
-      return $"Player 1 chooses {PlayerOne}. Player 2 chooses {PlayerTwo}. Player 1 wins!";
+      string response = String.Format("Player 1 chooses {0}. Player 2 chooses {1}. Player 1 wins!", PlayerOne, PlayerTwo);
+      return response;
     }
     public string PlayerTwoWins()
     {
-      return $"Player 1 chooses {PlayerOne}. Player 2 chooses {PlayerTwo}. Player 1 wins!";
+      return $"Player 1 chooses {PlayerOne}. Player 2 chooses {PlayerTwo}. Player 2 wins!";
     }
   }
 }
